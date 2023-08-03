@@ -49,13 +49,12 @@ credential = {}
 # credential['db'] = "test_db"
 
 
-import psycopg2
 
 credential={}
 credential['host']= "db-instance.c503gfuzpork.ap-south-1.rds.amazonaws.com"
 credential['port']=5432
 credential['username']="postgres"
-credential['password']= "Admin123"
+credential['password']= ""
 credential['db']= "test_db"
 
 
