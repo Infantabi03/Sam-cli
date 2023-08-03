@@ -66,11 +66,18 @@ app2$ curl http://localhost:3000/
 The SAM CLI reads the application template to determine the API's routes and the functions that they invoke. The `Events` property on each function's definition includes the route and method for each path.
 
 ```yaml
-      Events:
-        HelloWorld:
-          Type: Api
+     Events:
+        producer:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            Path: /hello
+            Path: /producer
+            Method: get
+
+       Events:
+        receiver:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /receiver
             Method: get
 ```
 
